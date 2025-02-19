@@ -371,71 +371,71 @@ button {
   .country-details {
     margin-top: 150px;
     width: 100%;
-    .header {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      position: fixed;
-      top: 0;
-      z-index: 1000;
-    }
-    .header-comp {
-      width: 90%;
-      margin-right: 70px;
-    }
-    .header-text {
-      margin-right: 40px;
-      font-size: small;
-      width: 100%;
-    }
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  .header-comp {
+    width: 90%;
+    margin-right: 70px;
+  }
+  .header-text {
+    margin-right: 40px;
+    font-size: small;
+    width: 100%;
+  }
 
-    .theme {
-      display: flex;
-      flex-direction: row;
-      gap: 5px;
-      justify-content: end;
-      align-items: center;
-    }
-    .search-box {
-      width: 82%;
-    }
-    .filter-container {
-      width: 30%;
-      margin-left: 30px;
-      font-size: 10px;
-    }
-    .filter-button {
-      font-size: 100%;
-    }
-    .second-section {
-      display: flex;
-      flex-direction: column;
-      margin-top: 90px;
-    }
-    .dark-mode-toggle {
-      font-size: 10px;
-    }
+  .theme {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: end;
+    align-items: center;
+  }
+  .search-box {
+    width: 82%;
+  }
+  .filter-container {
+    width: 30%;
+    margin-left: 30px;
+    font-size: 10px;
+  }
+  .filter-button {
+    font-size: 100%;
+  }
+  .second-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+  }
+  .dark-mode-toggle {
+    font-size: 10px;
+  }
 
-    .card {
-      padding: 8px;
-    }
-    .country-details {
-      margin: 0;
-      padding: 0;
-    }
-    .info {
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      height: 100%;
-      justify-content: center;
-      padding: 30px;
-    }
-    .back-button {
-      width: 20%;
-    }
-    .info-img {
-      width: 90%;
-    }
+  .card {
+    padding: 8px;
+  }
+  .country-details {
+    margin: 0;
+    padding: 0;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+    justify-content: center;
+    padding: 30px;
+  }
+  .back-button {
+    width: 20%;
+  }
+  .info-img {
+    width: 90%;
   }
 }
