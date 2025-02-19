@@ -3,6 +3,7 @@ import './App.css'
 import search from './assets/search.svg'
 
 export default function Search({ setSearchTerm }) {
+  function handleSearch() {}
   return (
     <div className='search-box'>
       <img className='search-img' src={search} alt='Search Icon' />

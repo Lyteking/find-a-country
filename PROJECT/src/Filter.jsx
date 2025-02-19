@@ -22,7 +22,7 @@ export default function Filter({ setSelectedContinent }) {
   return (
     <div className='filter-container'>
       <button className='filter-button' onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? 'Close' : 'All Continents ▼'}
+        {isOpen ? 'Close' : filterMessage || 'All Continents'}
       </button>
 
       {isOpen && (

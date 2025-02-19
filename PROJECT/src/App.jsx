@@ -27,12 +27,14 @@ export default function App() {
   }
 
   const filteredItems = countries.filter((item) => {
-    const matchesSearch = item.country
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase())
+    const formattedSearchTerm = searchTerm.replace(/\s+/g, '').toLowerCase()
+    const formattedCountryName = item.country.replace(/\s+/g, '').toLowerCase()
+
+    const matchesSearch = formattedCountryName.includes(formattedSearchTerm)
     const matchesContinent = selectedContinent
       ? item.continent === selectedContinent
       : true
+
     return matchesSearch && matchesContinent
   })
   useEffect(() => {
@@ -60,13 +62,15 @@ export default function App() {
         </div>
 
         <Routes>
-          {/* Home Route */}
           <Route
             path='/'
             element={
               <>
                 <div className='second-section'>
-                  <Search setSearchTerm={setSearchTerm} />
+                  <Search
+                    searchTerm={searchTerm}
+                    setSearchTerm={setSearchTerm}
+                  />
                   <Filter setSelectedContinent={setSelectedContinent} />
                 </div>
                 <CountryCard items={filteredItems} />
@@ -74,7 +78,10 @@ export default function App() {
             }
           />
 
-          <Route path='/:countryInfo' element={<CountryInfo />} />
+          <Route
+            path='/:countryInfo'
+            element={<CountryInfo searchTerm={setSearchTerm} />}
+          />
         </Routes>
       </div>
     </BrowserRouter>

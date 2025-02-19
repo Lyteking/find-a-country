@@ -104,7 +104,12 @@ body {
 .app-background-Dark .dark-mode-toggle:hover {
   background-color: #bcbcbc;
 }
-
+.app-background-Dark .second-section {
+  background-color: #f9f7f7;
+}
+.app-background-Light .second-section {
+  background-color: #102537;
+}
 .app-background-Dark {
   background-color: #f9fafa;
   color: #040202;
@@ -117,6 +122,8 @@ body {
 #themeBulb {
   width: 10%;
   height: 3%;
+  position: sticky;
+  top: 0;
 }
 .theme {
   display: flex;
@@ -138,6 +145,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
+  position: fixed;
+  width: 100%;
 }
 
 * {
@@ -209,6 +218,7 @@ input {
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
+  margin-right: 0;
 }
 
 .dropdown {
@@ -238,14 +248,19 @@ input {
   display: flex;
   justify-content: space-between;
   padding-right: 1px;
+  margin-top: 115px;
+  position: fixed;
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .container {
   width: 100%;
-  height: 451px;
-  overflow: auto;
+  height: 1%;
+  overflow: scroll;
   padding: 10px;
-  margin-top: 15px;
+  margin-top: 180px;
 }
 
 .container::-webkit-scrollbar {
@@ -260,17 +275,19 @@ input {
   justify-content: center;
 }
 
-.card:hover {
-  transform: scale(1.05);
+.app-background-Dark .card:hover {
+  background-color: #bcbcbc;
 }
-
+.app-background-Light .card:hover {
+  background-color: #102537;
+}
 .card {
   background-color: #202c37;
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
   padding-bottom: 15px;
-  transition: transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   cursor: pointer;
 }
 
@@ -289,7 +306,9 @@ input {
   text-align: left;
   padding: 10px;
 }
-
+.country {
+  width: 100%;
+}
 .country-info p {
   margin: 5px 0;
 }
@@ -324,11 +343,22 @@ button {
   border: none;
 }
 .country-details {
-  max-height: 100vh;
+  margin-top: 150px;
+  width: 100%;
+  position: fixed;
 }
 @media screen and (max-width: 720px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .filter-button {
+    width: 100%;
+    font-size: 90%;
+  }
+  .filter-container {
+    width: 30%;
+    font-size: 90%;
+    margin-right: 25px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -338,63 +368,74 @@ button {
   .grid-container {
     grid-template-columns: repeat(1, 1fr);
   }
-
-  .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .header-comp {
-    width: 90%;
-    margin-right: 70px;
-  }
-  .header-text {
-    margin-right: 40px;
-    font-size: small;
-    width: 100%;
-  }
-
-  .theme {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    justify-content: end;
-    align-items: center;
-  }
-  .search-box {
-    width: 82%;
-  }
-  .filter-container {
-    width: 30%;
-    margin-left: 30px;
-  }
-  .second-section {
-    display: flex;
-    flex-direction: column;
-  }
-  .dark-mode-toggle {
-    font-size: 10px;
-  }
-
-  .card {
-    padding: 8px;
-  }
   .country-details {
-    margin: 0;
-    padding: 0;
-  }
-  .info {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    height: 100%;
-    justify-content: center;
-    padding: 30px;
-  }
-  .back-button {
-    width: 20%;
-  }
-  .info-img {
-    width: 90%;
+    margin-top: 150px;
+    width: 100%;
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-comp {
+      width: 90%;
+      margin-right: 70px;
+    }
+    .header-text {
+      margin-right: 40px;
+      font-size: small;
+      width: 100%;
+    }
+
+    .theme {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      justify-content: end;
+      align-items: center;
+    }
+    .search-box {
+      width: 82%;
+    }
+    .filter-container {
+      width: 30%;
+      margin-left: 30px;
+      font-size: 10px;
+    }
+    .filter-button {
+      font-size: 100%;
+    }
+    .second-section {
+      display: flex;
+      flex-direction: column;
+      margin-top: 90px;
+    }
+    .dark-mode-toggle {
+      font-size: 10px;
+    }
+
+    .card {
+      padding: 8px;
+    }
+    .country-details {
+      margin: 0;
+      padding: 0;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      height: 100%;
+      justify-content: center;
+      padding: 30px;
+    }
+    .back-button {
+      width: 20%;
+    }
+    .info-img {
+      width: 90%;
+    }
   }
 }
