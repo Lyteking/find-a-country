@@ -369,7 +369,7 @@ button {
     grid-template-columns: repeat(1, 1fr);
   }
   .country-details {
-    margin-top: 150px;
+    margin-top: 105px;
     width: 100%;
   }
   .header {
@@ -419,10 +419,6 @@ button {
 
   .card {
     padding: 8px;
-  }
-  .country-details {
-    margin: 0;
-    padding: 0;
   }
   .info {
     display: flex;
