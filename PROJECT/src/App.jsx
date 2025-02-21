@@ -15,7 +15,7 @@ export default function App() {
   const [selectedContinent, setSelectedContinent] = useState('')
   const [toggleTheme, setToggleTheme] = useState('Dark')
   const [bulb, setBulb] = useState(darkMode)
-  const [filterMessage, setFilterMessage] = React.useState('All Continents ▼')
+  const [filterMessage, setFilterMessage] = React.useState('All Continents')
 
   function toggle() {
     if (toggleTheme === 'Dark') {
