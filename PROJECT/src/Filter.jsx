@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import './App.css'
 
-export default function Filter({ setSelectedContinent }) {
+export default function Filter({
+  setSelectedContinent,
+  filterMessage,
+  setFilterMessage,
+}) {
   const [isOpen, setIsOpen] = useState(false)
-  const [filterMessage, setFilterMessage] = React.useState('All Continents ▼')
 
   const continents = [
     'Africa',

@@ -15,6 +15,7 @@ export default function App() {
   const [selectedContinent, setSelectedContinent] = useState('')
   const [toggleTheme, setToggleTheme] = useState('Dark')
   const [bulb, setBulb] = useState(darkMode)
+  const [filterMessage, setFilterMessage] = React.useState('All Continents ▼')
 
   function toggle() {
     if (toggleTheme === 'Dark') {
@@ -71,7 +72,10 @@ export default function App() {
                     searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
                   />
-                  <Filter setSelectedContinent={setSelectedContinent} />
+                  <Filter
+                    setSelectedContinent={setSelectedContinent}
+                    {...{ filterMessage, setFilterMessage }}
+                  />
                 </div>
                 <CountryCard items={filteredItems} />
               </>
